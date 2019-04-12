@@ -43,6 +43,8 @@ def get_pet_labels(image_dir):
     animal_images = listdir(image_dir)
     cleaned_names = []
     for tmp in animal_images:
+        if tmp[0] == ".":
+            continue
         tmp = tmp.split(".")
         tmp = tmp[0]
         tmp = list(tmp.lower().split("_"))
