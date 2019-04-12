@@ -42,8 +42,11 @@ def get_pet_labels(image_dir):
     """
     animal_images = listdir(image_dir)
     cleaned_names = []
-    for i in animal_images:
-        tmp = list(i.lower().split("_"))[:-1]
+    for tmp in animal_images:
+        tmp = tmp.split(".")
+        tmp = tmp[0]
+        tmp = list(tmp.lower().split("_"))
+        tmp = tmp[:-1]
         if len(tmp) > 1:
             tmp = [" ".join(tmp)]
         cleaned_names.append(tmp)

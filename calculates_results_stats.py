@@ -106,7 +106,7 @@ def calculates_results_stats(results_dic):
             
             # Classifier classifies image as Dog (& pet image is a dog)
             # counts number of correct dog classifications
-            if results_dic[key][4] == 1:
+            if results_dic[key][4] == 1 and results_dic[key][3] == 1:
                 results_stats_dic['n_correct_dogs'] += 1
 
         # TODO: 5b. REPLACE pass with CODE that counts how many pet images 
@@ -126,7 +126,7 @@ def calculates_results_stats(results_dic):
         else:
             # Classifier classifies image as NOT a Dog(& pet image isn't a dog)
             # counts number of correct NOT dog clasifications.
-            if results_dic[key][2] == 0 and results_dic[key][3] == 0:
+            if results_dic[key][4] == 0 and results_dic[key][3] == 0:
                 results_stats_dic['n_correct_notdogs'] += 1
 
 

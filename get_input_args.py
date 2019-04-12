@@ -41,9 +41,9 @@ def get_input_args():
     # Create Parse using ArgumentParser
     parser = argparse.ArgumentParser(description = 'obtain image data pathway, classifier architecture, and output names file') 
     # Create 3 command line arguments as mentioned above using add_argument() from ArguementParser method
-    parser.add_argument('--dir',type = str, default = '/home/workspace/pet_images', help = 'Image Data Pathway')    
+    parser.add_argument('--dir',type = str, default = 'pet_images/', help = 'Image Data Pathway')    
     parser.add_argument('--arch', type = str, default = 'vgg', help = 'CNN architecture type')
-    parser.add_argument('--dogfile', type = str, default ='/home/workspace/dognames.txt', help = 'Dog Names text file')
+    parser.add_argument('--dogfile', type = str, default ='dognames.txt', help = 'Dog Names text file')
     
     # Replace None with parser.parse_args() parsed argument collection that 
     # you created with this function 
